@@ -4,7 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Noticiasisa</title>
-<meta name="description" content="Una propuesta del Gobierno para reducir hasta un 50% el valor de las multas de tránsito abre el debate entre el alivio económico y la seguridad vial en Colombia.">
+<meta name="description" content="Noticiasisa presenta información y análisis de actualidad con una experiencia de lectura clara, accesible y adaptable.">
+<meta name="theme-color" content="#fffdf7">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Noticiasisa">
+<meta property="og:title" content="Noticiasisa | Actualidad y análisis">
+<meta property="og:description" content="Encontrémonos con la actualidad. Lee el artículo y escucha su narración en español.">
 
 <!-- Tailwind CSS via CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
@@ -36,52 +41,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-  html { scroll-behavior: smooth; }
-  body { font-feature-settings: "kern" 1, "liga" 1; }
-
-  .drop-cap::first-letter {
-    float: left;
-    font-family: 'Source Serif 4', serif;
-    font-weight: 700;
-    font-size: 4.2rem;
-    line-height: 0.82;
-    padding-right: 0.55rem;
-    padding-top: 0.35rem;
-    color: rgb(255, 222, 89);
-  }
-
-  .article-body p { margin-bottom: 1.5rem; }
-
-  .pull-quote {
-    border-left: 3px solid rgb(255, 222, 89);
-    padding-left: 1.25rem;
-    margin: 2rem 0;
-    font-family: 'Source Serif 4', serif;
-    font-style: italic;
-    font-size: 1.15rem;
-    line-height: 1.7;
-    color: rgb(22, 21, 19);
-  }
-
-  .pull-quote cite {
-    display: block;
-    margin-top: 0.6rem;
-    font-style: normal;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.8rem;
-    color: rgb(111, 106, 92);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    * { animation: none !important; transition: none !important; }
-  }
-
-  a:focus-visible, button:focus-visible {
-    outline: 2px solid rgb(255, 222, 89);
-    outline-offset: 2px;
-  }
-</style>
+<link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="bg-paper text-ink font-sans antialiased">
@@ -89,7 +49,7 @@
   <!-- ===== HEADER ===== -->
   <header class="border-b border-rule">
     <div class="max-w-4xl mx-auto px-6 py-5 flex items-center justify-between">
-      <img src="imagenes/Noticiasisa-removebg-preview.png" alt="Notisa" class="h-28 sm:h-36 w-auto">
+      <img src="imagenes/Noticiasisa-removebg-preview.png" alt="Logotipo de Noticiasisa" decoding="async" class="h-28 sm:h-36 w-auto">
       <p class="hidden sm:block text-xs text-muted font-medium tracking-wide uppercase">Encontrémonos con la actualidad</p>
     </div>
   </header>
@@ -125,7 +85,7 @@
         </button>
         <div class="flex-1 min-w-0">
           <p class="text-sm font-medium text-ink">Escuchar la noticia narrada</p>
-          <p id="listenStatus" class="text-xs text-muted">Lectura automática en español · ideal si no quieres leer</p>
+          <p id="listenStatus" class="text-xs text-muted" aria-live="polite" aria-atomic="true">Lectura automática en español · ideal si no quieres leer</p>
         </div>
         <button id="stopBtn" type="button" hidden
           class="text-xs text-muted hover:text-brandDark underline underline-offset-2 shrink-0">
@@ -138,7 +98,7 @@
     <section class="max-w-4xl mx-auto px-6 mt-10">
       <img
         src="imagenes/foto1.png"
-        alt="Abelardo De La Espriella, presidente de Colombia, anuncia la reducción de las multas de tránsito"
+        alt="Imagen principal del artículo sobre la propuesta de reducción de multas de tránsito" fetchpriority="high" decoding="async"
         class="w-full h-[240px] sm:h-[420px] object-cover rounded-2xl">
       <p class="text-xs text-muted mt-3">Foto: Revista Semana</p>
     </section>
@@ -172,7 +132,7 @@
       </p>
 
       <figure class="my-8">
-        <img src="imagenes/foto2.png" alt="Via Medellin fotomultas" class="w-full rounded-2xl object-cover max-h-[320px]">
+        <img src="imagenes/foto2.png" alt="Vía urbana con sistema de fotodetección" loading="lazy" decoding="async" class="w-full rounded-2xl object-cover max-h-[320px]">
         <figcaption class="text-xs text-muted mt-2">Foto: Momento Emprendedor</figcaption>
       </figure>
 
@@ -190,7 +150,7 @@
       </p>
 
       <figure class="my-8">
-        <img src="imagenes/foto3.png" alt="Movilidad en una vía de Medellín" class="w-full rounded-2xl object-cover max-h-[380px]">
+        <img src="imagenes/foto3.png" alt="Tráfico vehicular en una vía de Medellín" loading="lazy" decoding="async" class="w-full rounded-2xl object-cover max-h-[380px]">
         <figcaption class="text-xs text-muted mt-2">Foto: El Colombiano</figcaption>
       </figure>
 
@@ -208,7 +168,7 @@ Se evidencia en esta parte como se contrasta la preocupación con el especialist
       </p>
 
       <figure class="my-8">
-        <img src="imagenes/foto4.png" alt="Agente de tránsito" class="w-full rounded-2xl object-cover max-h-[380px]">
+        <img src="imagenes/foto4.png" alt="Agente de tránsito durante labores de control vial" loading="lazy" decoding="async" class="w-full rounded-2xl object-cover max-h-[380px]">
         <figcaption class="text-xs text-muted mt-2">Foto: Minuto 30</figcaption>
       </figure>
 
@@ -224,13 +184,13 @@ Esta idea que busca reducir el 50% el valor de las fotomultas es un alivio para 
     <div class="max-w-4xl mx-auto px-6 py-10">
       <div class="flex flex-col sm:flex-row sm:justify-between gap-8">
         <div class="max-w-xs">
-          <img src="imagenes/Noticiasisa-removebg-preview.png" alt="Noticiasisa" class="h-10 w-auto mb-3">
+          <img src="imagenes/Noticiasisa-removebg-preview.png" alt="Logotipo de Noticiasisa" class="h-10 w-auto mb-3" loading="lazy" decoding="async">
           <p class="text-sm text-muted leading-relaxed">Encontrémonos con la actualidad</p>
         </div>
         <nav aria-label="Contacto y redes" class="flex flex-col gap-2 text-sm">
           <span class="text-muted font-medium mb-1">Síguenos</span>
           <a href="https://www.instagram.com/noticiasisa/" class="hover:text-brandDark transition-colors">Instagram</a>
-          <a href="#" class="hover:text-brandDark transition-colors">Contacto</a>
+          <a href="https://www.instagram.com/noticiasisa/" class="hover:text-brandDark transition-colors">Contacto por Instagram</a>
         </nav>
       </div>
       <div class="border-t border-rule mt-8 pt-6 flex flex-col sm:flex-row sm:justify-between gap-2 text-xs text-muted">
@@ -240,150 +200,7 @@ Esta idea que busca reducir el 50% el valor de las fotomultas es un alivio para 
     </div>
   </footer>
 
-  <!-- ===== SCRIPT: NARRACIÓN DE LA NOTICIA (Web Speech API, sin archivos de audio) ===== -->
-  <script>
-  (function () {
-    var playBtn = document.getElementById('listenBtn');
-    var playIcon = document.getElementById('playIcon');
-    var pauseIcon = document.getElementById('pauseIcon');
-    var stopBtn = document.getElementById('stopBtn');
-    var status = document.getElementById('listenStatus');
-    var articleEl = document.querySelector('.article-body');
-
-    if (!('speechSynthesis' in window)) {
-      status.textContent = 'Tu navegador no soporta lectura en voz alta.';
-      playBtn.disabled = true;
-      playBtn.classList.add('opacity-40', 'cursor-not-allowed');
-      return;
-    }
-
-    var isPaused = false;
-    var hasStarted = false;
-    var queue = [];
-    var queueIndex = 0;
-
-    // Divide el artículo en fragmentos cortos (por nodo y por oración),
-    // en vez de un solo bloque de texto larguísimo. Esto evita el corte
-    // que hacen algunos navegadores en lecturas muy largas y permite
-    // mostrar el avance ("X %").
-    function buildQueue() {
-      var chunks = [];
-      var titleEl = document.querySelector('h1');
-      var dekEl = titleEl.parentElement.querySelector('p.text-lg');
-      chunks.push(titleEl.innerText.trim());
-      chunks.push(dekEl.innerText.trim());
-
-      articleEl.querySelectorAll('h2, p, blockquote').forEach(function (node) {
-        var text = node.innerText.trim().replace(/\s+/g, ' ');
-        if (!text) return;
-        // Divide párrafos largos en oraciones para pausas más naturales
-        var sentences = text.match(/[^.!?…]+[.!?…]+["'”]?|[^.!?…]+$/g) || [text];
-        sentences.forEach(function (s) {
-          var trimmed = s.trim();
-          if (trimmed) chunks.push(trimmed);
-        });
-      });
-      return chunks;
-    }
-
-    // Voces femeninas en español conocidas en Windows, macOS, Chrome y Edge.
-    var FEMALE_HINTS = [
-      'valentina', 'monica', 'sofia', 'paola', 'laura', 'ana', 'carla', 'isabel', 'gabriela',
-      'sara', 'camila', 'julia', 'lucia', 'elena', 'clara', 'natalia'
-    ];
-
-    function pickFemaleSpanishVoice() {
-      var voices = speechSynthesis.getVoices();
-      var esVoices = voices.filter(function (v) {
-        return v.lang && v.lang.toLowerCase().indexOf('es') === 0;
-      });
-      // 1) Coincidencia por nombre conocido de voz femenina
-      var byName = esVoices.find(function (v) {
-        var name = v.name.toLowerCase();
-        return FEMALE_HINTS.some(function (hint) { return name.indexOf(hint) !== -1; });
-      });
-      if (byName) return byName;
-      // 2) Cualquier voz "Google español" (por defecto femenina en Chrome)
-      var google = esVoices.find(function (v) { return v.name.toLowerCase().indexOf('google') !== -1; });
-      if (google) return google;
-      // 3) Cualquier voz en español disponible
-      if (esVoices.length) return esVoices[0];
-      // 4) Última opción: la voz por defecto del sistema
-      return voices[0];
-    }
-
-    function setPlayingUI() {
-      playIcon.classList.add('hidden');
-      pauseIcon.classList.remove('hidden');
-      stopBtn.hidden = false;
-      var pct = queue.length ? Math.round((queueIndex / queue.length) * 100) : 0;
-      status.textContent = 'Narrando la noticia… (' + pct + '%)';
-    }
-
-    function resetUI() {
-      playIcon.classList.remove('hidden');
-      pauseIcon.classList.add('hidden');
-      stopBtn.hidden = true;
-      status.textContent = 'Lectura automática en español · ideal si no quieres leer';
-      isPaused = false;
-      hasStarted = false;
-      queueIndex = 0;
-    }
-
-    function speakChunk(index) {
-      if (index >= queue.length) {
-        resetUI();
-        return;
-      }
-      queueIndex = index;
-      var utterance = new SpeechSynthesisUtterance(queue[index]);
-      var voice = pickFemaleSpanishVoice();
-      if (voice) {
-        utterance.voice = voice;
-        utterance.lang = voice.lang;
-      } else {
-        utterance.lang = 'es-CO';
-      }
-      utterance.rate = 0.98;   // ritmo natural, ni apurado ni lento
-      utterance.pitch = 1.05;  // tono ligeramente más agudo, voz femenina más clara
-      utterance.onend = function () { speakChunk(index + 1); };
-      utterance.onerror = resetUI;
-      speechSynthesis.speak(utterance);
-      setPlayingUI();
-    }
-
-    function startSpeaking() {
-      queue = buildQueue();
-      hasStarted = true;
-      speakChunk(0);
-    }
-
-    playBtn.addEventListener('click', function () {
-      if (speechSynthesis.speaking && !isPaused) {
-        speechSynthesis.pause();
-        isPaused = true;
-        playIcon.classList.remove('hidden');
-        pauseIcon.classList.add('hidden');
-        status.textContent = 'En pausa';
-      } else if (isPaused) {
-        speechSynthesis.resume();
-        isPaused = false;
-        setPlayingUI();
-      } else if (!hasStarted) {
-        if (speechSynthesis.getVoices().length === 0) {
-          speechSynthesis.onvoiceschanged = startSpeaking;
-        } else {
-          startSpeaking();
-        }
-      }
-    });
-
-    stopBtn.addEventListener('click', function () {
-      speechSynthesis.cancel();
-      resetUI();
-    });
-  })();
-  </script>
+  <script src="js/narration.js" defer></script>
 
 </body>
 </html>
