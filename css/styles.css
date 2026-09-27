@@ -1,0 +1,59 @@
+/* Noticiasisa — estilos editoriales */
+html { scroll-behavior: smooth; }
+  body { font-feature-settings: "kern" 1, "liga" 1; }
+
+  .drop-cap::first-letter {
+    float: left;
+    font-family: 'Source Serif 4', serif;
+    font-weight: 700;
+    font-size: 4.2rem;
+    line-height: 0.82;
+    padding-right: 0.55rem;
+    padding-top: 0.35rem;
+    color: rgb(255, 222, 89);
+  }
+
+  .article-body p { margin-bottom: 1.5rem; }
+
+  .pull-quote {
+    border-left: 3px solid rgb(255, 222, 89);
+    padding-left: 1.25rem;
+    margin: 2rem 0;
+    font-family: 'Source Serif 4', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: rgb(22, 21, 19);
+  }
+
+  .pull-quote cite {
+    display: block;
+    margin-top: 0.6rem;
+    font-style: normal;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: rgb(111, 106, 92);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid rgb(255, 222, 89);
+    outline-offset: 2px;
+  }
+
+/* Evita que imágenes y elementos multimedia desborden el viewport. */
+img { max-width: 100%; }
+
+/* Mejora la legibilidad al navegar con teclado. */
+:focus-visible {
+  outline: 3px solid rgb(182, 137, 15);
+  outline-offset: 3px;
+}
+
+/* El estado de pausa debe seguir siendo perceptible sin depender del color. */
+button:disabled {
+  cursor: not-allowed;
+}
